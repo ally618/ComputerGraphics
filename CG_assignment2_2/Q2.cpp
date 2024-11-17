@@ -20,13 +20,13 @@ void MyDisplay() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
     glLoadIdentity(); 
 
-    //-------------------------------------------------------½ÃÁ¡º¯È¯
+    //-------------------------------------------------------ì‹œì ë³€í™˜
     gluLookAt(0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 1.0, 0.0);
     //-------------------------------------------------------
 
-    glTranslatef(translateX, translateY, translateZ); // ÀÌµ¿
-    glScalef(scale, scale, scale); // Å©±â Á¶Á¤
-    glRotatef(rtri, 0.0f, 1.0f, 0.0f); // YÃà ±âÁØ È¸Àü
+    glTranslatef(translateX, translateY, translateZ); // ì´ë™
+    glScalef(scale, scale, scale); // í¬ê¸° ì¡°ì •
+    glRotatef(rtri, 0.0f, 1.0f, 0.0f); // Yì¶• ê¸°ì¤€ íšŒì „
     glBegin(GL_TRIANGLES);
 
     glColor3f(1.0f, 0.0f, 0.0f);          // Red
@@ -62,23 +62,23 @@ void MyDisplay() {
 
     glEnd();                        // Done Drawing The Pyramid
 
-    glutSwapBuffers(); // È­¸é ¹öÆÛ ±³Ã¼
+    glutSwapBuffers(); // í™”ë©´ ë²„í¼ êµì²´
 }
 
 
 void MyKeyboard(unsigned char key, int x, int y) {
     switch (key) {
-    case 'w': translateY += 0.1f; break; // À§
-    case 's': translateY -= 0.1f; break; // ¾Æ·¡
-    case 'a': translateX -= 0.1f; break; // ¿ÞÂÊ
-    case 'd': translateX += 0.1f; break; // ¿À¸¥ÂÊ
-    case '1': scale += 0.1f; break; // Å©±â Áõ°¡
-    case '2': scale -= 0.1f; break; // Å©±â °¨¼Ò
+    case 'w': translateY += 0.1f; break; // ìœ„
+    case 's': translateY -= 0.1f; break; // ì•„ëž˜
+    case 'a': translateX -= 0.1f; break; // ì™¼ìª½
+    case 'd': translateX += 0.1f; break; // ì˜¤ë¥¸ìª½
+    case '1': scale += 0.1f; break; // í¬ê¸° ì¦ê°€
+    case '2': scale -= 0.1f; break; // í¬ê¸° ê°ì†Œ
     case 'r':
-        rtri += 5.0f; // È¸Àü
+        rtri += 5.0f; // íšŒì „
         if (rtri > 360.0f) rtri -= 360.0f;
         break;
-    case 27: exit(0); // ESC Å°·Î Á¾·á
+    case 27: exit(0); // ESC í‚¤ë¡œ ì¢…ë£Œ
     }
     glutPostRedisplay();
 }
@@ -88,7 +88,7 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(800, 600);
-    glutCreateWindow("3D ÇÇ¶ó¹Ìµå º¯È¯");
+    glutCreateWindow("Q2");
 
     glEnable(GL_DEPTH_TEST); 
 
